@@ -1,0 +1,124 @@
+html, body, .table-responsive {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.table-responsive {
+    flex-direction: column;
+    pointer-events: none;
+    cursor: default;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    height: 85vh;
+    background-color: gray;
+}
+
+.row:first-child {
+    height: 15vh;
+    font-size: 4vmin;
+}
+
+.col {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #050507;
+}
+
+.col:hover {
+    opacity: 0.8;
+}
+
+.Ligne_score {
+    font-size: 6vmin;
+    font-weight: bold;
+}
+
+.toast {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+#toast {
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    margin-top: 5vh;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 7vmin;
+    max-width: 80%;
+}
+
+
+.joueur, input, .colour-ihm-control, .colour-ihm-font {
+    width: 100%;
+    text-align: center;
+}
+
+[contenteditable="true"] {
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+[contenteditable="true"] br {
+    display: none;
+}
+
+[contenteditable="true"] * {
+    display: inline;
+    white-space: nowrap;
+}
+
+.colour-ihm {
+    display: flex;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  font-size: 8vmin;
+  font-weight: bold;
+  background-color: slategrey;
+}
+
+.button:hover {
+  background: #ddd;
+}
+
+.flex_h {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 25%;
+}
+
+.flex_v {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
