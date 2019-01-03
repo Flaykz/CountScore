@@ -44,13 +44,24 @@ $(function() {
 		}
 	});
 	
+	$('.Ligne_score').click(function() {
+		var joueur = $(this).children().attr('id');
+		setLocalStorage("currentPlayer", joueur);
+		$('.Ligne_score, .Ligne_nom').css("background-color", "gray");
+		$('.' + joueur).css('background-color', 'orange');
+	});
+	
 	$(".button").click(function() {
 		var point = $(this).attr('val');
-		var joueur = $(this).attr('name');
-		var tabScore = getTabScore();
-		tabScore[joueur].score = tabScore[joueur].score + parseInt(point);
-		setTabScore(tabScore);
-		refreshScreen();
+		var joueur = getLocalStorage('currentPlayer');
+		if (joueur != "") {
+			var tabScore = getTabScore();
+			tabScore[joueur].score = tabScore[joueur].score + parseInt(point);
+			setTabScore(tabScore);
+			refreshScreen();	
+		} else {
+			showToast("You must select a player before to add points", "0");
+		}
 	});
 	
 	$("#startGame").click(function() {
@@ -112,6 +123,8 @@ function init() {
 		var nbJoueur = getNbJoueur();
 		var tabScore = getTabScore();
 		var maxWidth = 100 / (nbJoueur);
+		var currentPlayer = getLocalStorage('currentPlayer');
+		$('.' + currentPlayer).css('background-color', 'orange');
 		$(".col").css("max-width", maxWidth + "vw");
 		$('.mymodal').css("display", "none");
 		refreshScreen();
@@ -142,6 +155,7 @@ function init() {
 		tabColour['Joueur_1'] = value;
 		setLocalStorage('colour', tabColour);
 		setLocalStorage('pending', "0");
+		setLocalStorage('currentPlayer', "");
 	}
 	
 	setTabScore(tabScore);

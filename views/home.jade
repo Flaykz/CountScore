@@ -158,17 +158,18 @@ html(lang="fr", dir="ltr")
               default
                 div.col.Ligne_score(class="Joueur_#{countName}")
                   span(id="Joueur_#{countName}") 0
-                  div.flex_h
-                    span.button(name="Joueur_#{countName}", val='-1') -1
-                    span.button(name="Joueur_#{countName}", val='1') +1
-                  div.flex_h
-                    span.button(name="Joueur_#{countName}", val='-5') -5
-                    span.button(name="Joueur_#{countName}", val='5') +5
-                  div.flex_h
-                    span.button(name="Joueur_#{countName}", val='-10') -10
-                    span.button(name="Joueur_#{countName}", val='10') +10
             - countName++;
         - countItem++;
+      div.row.flex_v
+        div.flex_h
+          span.button(val='-1') -1
+          span.button( val='1') +1
+        div.flex_h
+          span.button(val='-5') -5
+          span.button(val='5') +5
+        div.flex_h
+          span.button(val='-10') -10
+          span.button(val='10') +10
     footer
       div.modalEndGame(role="dialog") 
       script(defer, src='/js/home.js')
