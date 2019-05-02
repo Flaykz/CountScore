@@ -1,6 +1,6 @@
 {
-    "short_name": "App",
-    "name": "App for",
+    "short_name": "CountScore",
+    "name": "App for counting score",
     "icons": [
         {
           "src": "/images/launcher-icon-1x.png",
