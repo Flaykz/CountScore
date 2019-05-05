@@ -1,7 +1,7 @@
 {
-  "name": "app",
-  "version": "0.0.0",
-  "description": "app description",
+  "name": "CountScore",
+  "version": "1.0.0",
+  "description": "Web App permettant de calculer des scores",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Flaykz/app.git"
+    "url": "git+https://github.com/Flaykz/CountScore.git"
   },
   "author": "BROUSTE David",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Flaykz/app/issues"
+    "url": "https://github.com/Flaykz/CountScore/issues"
   },
-  "homepage": "https://github.com/Flaykz/apps#readme",
+  "homepage": "https://github.com/Flaykz/CountScore#readme",
   "dependencies": {
     "compression": "^1.7.1",
     "constantinople": "^3.1.2",

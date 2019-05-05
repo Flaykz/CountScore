@@ -1,5 +1,5 @@
-var version = 'v0:0:0';
-var CACHE_NAME = 'app-cache';
+var version = 'v1.0.0';
+var CACHE_NAME = 'CountScore-cache';
 var urlsToCache = [
   '/',
   '/sw.js',

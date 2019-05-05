@@ -1,6 +1,6 @@
 {
     "short_name": "CountScore",
-    "name": "App for counting score",
+    "name": "Web App permettant de calculer des scores",
     "icons": [
         {
           "src": "/images/launcher-icon-1x.png",
